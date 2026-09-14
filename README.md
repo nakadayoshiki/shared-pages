@@ -1,3 +1,5 @@
-# tgs2026-map
+# shared-pages
 
-東京ゲームショウ2026 9/19(土) 会場マップ。表は非公開リポジトリで管理
+同行者と共有する1枚ページ置き場。中身は非公開リポジトリ(researcher)で作る。
+
+- [tgs2026](https://nakadayoshiki.github.io/shared-pages/tgs2026/)
