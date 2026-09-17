@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X 埋め込みの見本(案 2)</title>
+<style>
+  :root{--bg:#F5F6F3;--panel:#fff;--ink:#1E2624;--ink-2:#4A5450;--line:#D9DED9;--accent:#2D5F52}
+  @media (prefers-color-scheme:dark){:root{--bg:#15181A;--panel:#1E2224;--ink:#EEF1EE;--ink-2:#C2C9C4;--line:#333A3C;--accent:#6FB8A3}}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans",system-ui,sans-serif;padding:16px;max-width:960px;margin-inline:auto;line-height:1.6}
+  h1{font-size:20px;margin:0 0 6px}.lede{color:var(--ink-2);margin:0 0 16px;font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .card h2{font-size:16px;margin:0 0 2px}.meta{font-size:13px;color:var(--ink-2);margin:0 0 8px}
+  .slots{margin:0 0 10px;padding-left:18px;font-size:14px}
+  .x{font-size:13px}.x a{color:var(--accent)}
+  .note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:10px 14px;margin:18px 0;font-size:14px}
+  .emb{min-height:120px;border-top:1px dashed var(--line);padding-top:8px}
+  .lbl{font-size:12px;color:var(--ink-2);margin:0 0 6px}
+</style></head><body>
+<h1>X 埋め込みの見本(案 2)</h1>
+<p class="lede">人物カードの下に、X の公式埋め込み(プロフィールのタイムライン / 固定の投稿)を置いた場合の見え方。画像は X から本人の投稿として表示され、こちらでは保存・再掲しない。</p>
+
+<div class="grid">
+  <div class="card">
+    <h2>k4sen(ZETA DIVISION)</h2>
+    <p class="meta">配信者 · X @thek4sen(213.9K、9/12)</p>
+    <ul class="slots"><li>11:20〜12:10 セガ/アトラス 04-N01『ペルソナ４ リバイバル』</li><li>13:00 LIONA 05-C09 ZETA エキシビション</li></ul>
+    <p class="x"><a href="https://x.com/thek4sen" target="_blank" rel="noopener">X のプロフィールを開く</a></p>
+    <div class="emb"><p class="lbl">埋め込み A: プロフィールのタイムライン(最新 3 件、高さ 420px)</p>
+      <a class="twitter-timeline" data-height="420" data-tweet-limit="3" data-dnt="true" data-chrome="noheader nofooter" href="https://twitter.com/thek4sen?ref_src=twsrc%5Etfw">Posts by @thek4sen</a>
+    </div>
+  </div>
+  <div class="card">
+    <h2>えなこ</h2>
+    <p class="meta">コスプレイヤー · X @enako_cos</p>
+    <ul class="slots"><li>11:15〜12:15 / 14:15〜15:15 netmarble 02-N12 コスプレショー & ストリーマーステージ</li></ul>
+    <p class="x"><a href="https://x.com/enako_cos" target="_blank" rel="noopener">X のプロフィールを開く</a></p>
+    <div class="emb"><p class="lbl">埋め込み A: プロフィールのタイムライン(最新 3 件)</p>
+      <a class="twitter-timeline" data-height="420" data-tweet-limit="3" data-dnt="true" data-chrome="noheader nofooter" href="https://twitter.com/enako_cos?ref_src=twsrc%5Etfw">Posts by @enako_cos</a>
+    </div>
+  </div>
+  <div class="card">
+    <h2>ZETA DIVISION(公式)</h2>
+    <p class="meta">出展社 · X @zetadivision</p>
+    <ul class="slots"><li>ブース 03-C04 の各ステージ、物販 09-W38</li></ul>
+    <p class="x"><a href="https://x.com/zetadivision" target="_blank" rel="noopener">X のプロフィールを開く</a></p>
+    <div class="emb"><p class="lbl">埋め込み B: 特定の投稿 1 件(DAY3 TIMETABLE の告知)</p>
+      <blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/zetadivision/status/2098389758754091263?ref_src=twsrc%5Etfw">投稿を読み込み中…</a></blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <b>見えないときは:</b> X の埋め込みは platform.twitter.com のスクリプトで描画されます。会場の電波が弱いとカード本文だけ先に出て、埋め込み部分は空のまま(リンクだけ)になります。Artifact(claude.ai)版では外部読み込みが遮断されるため常に空です。ブラウザの追跡防止(Safari の ITP、Brave 等)が有効だと X にログインしていても表示されないことがあります。
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body></html>
