@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>見どころ · 大阪 9/20〜22</title>
+<meta name="description" content="大阪 2026-09-20〜22 のエリア別の見どころ。事実は公式の一次情報から作った表から生成しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+ --ground:#F2F3EF; --panel:#FBFBF9; --panel-2:#ECEEE9; --line:#CDD2CB;
+ --ink:#1B201D; --ink-2:#4F5955; --ink-3:#5F6A65;
+ --accent:#2D5F52; --accent-ink:#FFFFFF;
+ --g-food:#C2490F; --g-sight:#2A6FDB; --g-shop:#7A3FC7; --g-etc:#6B746F; --ev:#C22E6E;
+ --warn:#A5301E;
+ --sec-feature-bg:#175A9E; --sec-feature-ink:#FFFFFF; --sec-feature-dot:#175A9E;
+ --sec-caution-bg:#A5301E; --sec-caution-ink:#FFFFFF; --sec-caution-dot:#A5301E;
+ --sec-pick-bg:#A8431A; --sec-pick-ink:#FFFFFF; --sec-pick-dot:#A8431A;
+ --sec-event-bg:#9B2260; --sec-event-ink:#FFFFFF; --sec-event-dot:#9B2260;
+ --sec-list-bg:#4C5854; --sec-list-ink:#FFFFFF; --sec-list-dot:#4C5854;
+ --sec-nav-bg:#2D5F52; --sec-nav-ink:#FFFFFF; --sec-nav-dot:#2D5F52;
+ --barh:132px;
+ color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --ground:#15181A; --panel:#1E2224; --panel-2:#262B2D; --line:#3A4143;
+ --ink:#E8ECE9; --ink-2:#B4BCB8; --ink-3:#949E99;
+ --accent:#6FB8A3; --accent-ink:#0F1512;
+ --g-food:#F0935A; --g-sight:#6AA0F5; --g-shop:#B187F0; --g-etc:#9AA39E; --ev:#F06AA6;
+ --warn:#F5A79C;
+ --sec-feature-bg:#16334F; --sec-feature-ink:#A8CDF7; --sec-feature-dot:#A8CDF7;
+ --sec-caution-bg:#471E19; --sec-caution-ink:#F5A79C; --sec-caution-dot:#F5A79C;
+ --sec-pick-bg:#48261A; --sec-pick-ink:#F6B189; --sec-pick-dot:#F6B189;
+ --sec-event-bg:#3D1930; --sec-event-ink:#F3A7CC; --sec-event-dot:#F3A7CC;
+ --sec-list-bg:#2A3130; --sec-list-ink:#C3CCC8; --sec-list-dot:#C3CCC8;
+ --sec-nav-bg:#15322B; --sec-nav-ink:#8CD2BD; --sec-nav-dot:#8CD2BD;
+ color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+ --ground:#15181A; --panel:#1E2224; --panel-2:#262B2D; --line:#3A4143;
+ --ink:#E8ECE9; --ink-2:#B4BCB8; --ink-3:#949E99;
+ --accent:#6FB8A3; --accent-ink:#0F1512;
+ --g-food:#F0935A; --g-sight:#6AA0F5; --g-shop:#B187F0; --g-etc:#9AA39E; --ev:#F06AA6;
+ --warn:#F5A79C;
+ --sec-feature-bg:#16334F; --sec-feature-ink:#A8CDF7; --sec-feature-dot:#A8CDF7;
+ --sec-caution-bg:#471E19; --sec-caution-ink:#F5A79C; --sec-caution-dot:#F5A79C;
+ --sec-pick-bg:#48261A; --sec-pick-ink:#F6B189; --sec-pick-dot:#F6B189;
+ --sec-event-bg:#3D1930; --sec-event-ink:#F3A7CC; --sec-event-dot:#F3A7CC;
+ --sec-list-bg:#2A3130; --sec-list-ink:#C3CCC8; --sec-list-dot:#C3CCC8;
+ --sec-nav-bg:#15322B; --sec-nav-ink:#8CD2BD; --sec-nav-dot:#8CD2BD;
+ color-scheme:dark;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{margin:0; background:var(--ground); color:var(--ink); font-size:15px; line-height:1.72;
+ font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif; overflow-x:hidden;}
+h1,h2,h3,p,li,dt,dd,summary,blockquote,.nm,.mt,.dsc{overflow-wrap:anywhere; min-width:0;}
+.wrap{max-width:760px; margin:0 auto; padding:0 16px 64px;}
+a{color:var(--accent);}
+.bar{position:sticky; top:0; z-index:5; background:var(--panel); border-bottom:1px solid var(--line);}
+.bar .in{max-width:760px; margin:0 auto; padding:10px 16px; display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 10px;}
+.bar h1{font-family:"Barlow Condensed","Zen Kaku Gothic New",sans-serif; font-size:21px; margin:0; letter-spacing:.01em;}
+.bar .sub{font-size:12px; color:var(--ink-3); width:100%;}
+nav.top{display:flex; flex-wrap:wrap; gap:6px; width:100%;}
+nav.top a{font-size:13px; text-decoration:none; color:var(--ink); background:var(--panel-2);
+ border:1px solid var(--line); border-radius:999px; padding:7px 12px; line-height:1.4;}
+nav.top a[aria-current="page"]{background:var(--accent); color:var(--accent-ink); border-color:var(--accent); font-weight:700;}
+nav.top a.map{border-color:var(--accent); color:var(--accent); font-weight:700;}
+h2.sec{font-size:17px; font-weight:700; line-height:1.5; margin:34px 0 12px; padding:9px 14px;
+ border:0; border-radius:8px; background:var(--sb,var(--accent)); color:var(--si,var(--accent-ink));
+ display:flex; flex-wrap:wrap; align-items:baseline; column-gap:10px;}
+h2.sec .n{font-size:12px; font-weight:400; color:var(--si,var(--accent-ink));}
+h2.sec{scroll-margin-top:calc(var(--barh) + 12px);}
+.r-feature{--sb:var(--sec-feature-bg); --si:var(--sec-feature-ink); --sd:var(--sec-feature-dot);}
+.r-caution{--sb:var(--sec-caution-bg); --si:var(--sec-caution-ink); --sd:var(--sec-caution-dot);}
+.r-pick{--sb:var(--sec-pick-bg); --si:var(--sec-pick-ink); --sd:var(--sec-pick-dot);}
+.r-event{--sb:var(--sec-event-bg); --si:var(--sec-event-ink); --sd:var(--sec-event-dot);}
+.r-list{--sb:var(--sec-list-bg); --si:var(--sec-list-ink); --sd:var(--sec-list-dot);}
+.r-nav{--sb:var(--sec-nav-bg); --si:var(--sec-nav-ink); --sd:var(--sec-nav-dot);}
+nav.toc{margin:14px 0 18px; padding:11px 13px 13px; background:var(--panel); border:1px solid var(--line); border-radius:12px;}
+nav.toc .tl{margin:0 0 8px; font-size:12px; font-weight:700; letter-spacing:.14em; color:var(--ink-2);}
+nav.toc ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px;}
+nav.toc li{display:flex; min-width:0; max-width:100%;}
+nav.toc a{display:inline-flex; align-items:center; gap:7px; min-height:36px; padding:6px 13px; font-size:14px;
+ line-height:1.4; text-decoration:none; color:var(--ink); background:var(--panel-2);
+ border:1px solid var(--line); border-radius:999px;}
+nav.toc a::before{content:""; flex:0 0 auto; width:9px; height:9px; border-radius:3px; background:var(--sd,var(--accent));}
+nav.toc a .n{font-size:12px; color:var(--ink-2); font-variant-numeric:tabular-nums;}
+h3{font-size:15px; margin:0 0 6px; line-height:1.5;}
+h3.grp{font-size:15px; margin:18px 0 8px; padding:7px 12px; border-left:5px solid var(--ev);
+ border-radius:0 8px 8px 0; background:var(--panel-2);}
+h3.grp .n{font-size:12px; color:var(--ink-2); font-weight:400; margin-left:8px;}
+p{margin:0 0 10px;}
+.lede{color:var(--ink-2); font-size:14px;}
+.note{font-size:13px; color:var(--ink-2); background:var(--panel-2); border-left:3px solid var(--line);
+ padding:8px 12px; border-radius:0 8px 8px 0;}
+.note-s{font-size:12px; color:var(--ink-2);}
+.warnline{font-size:13px; font-weight:700; color:var(--warn);}
+.sum{font-size:14px; color:var(--ink-2); margin:0 0 8px;}
+.sum .mk{display:inline-block; font-size:12px; font-weight:700; color:var(--accent);
+ border:1px solid var(--accent); border-radius:999px; padding:0 8px; margin-right:6px;}
+ul.feat{list-style:none; margin:0 0 10px; padding:0;}
+ul.feat li{font-size:14px; padding:5px 0 5px 16px; position:relative; border-top:1px solid var(--line);}
+ul.feat li::before{content:""; position:absolute; left:2px; top:14px; width:7px; height:7px;
+ border-radius:2px; background:var(--accent);}
+details.off{margin:0 0 10px; background:var(--panel); border:1px solid var(--line); border-radius:10px;}
+details.off > summary{cursor:pointer; padding:9px 12px; font-size:13px; font-weight:700; color:var(--ink-2); border-radius:10px;}
+details.off[open] > summary{border-bottom:1px solid var(--line); border-radius:10px 10px 0 0;}
+details.off blockquote{margin:0; padding:10px 14px; font-size:14px; line-height:1.75;}
+details.off .src{margin:0; padding:0 14px 10px; font-size:12px;}
+ul.cautions{list-style:none; margin:0 0 10px; padding:0;}
+ul.cautions li{font-size:14px; line-height:1.7; color:var(--ink); background:var(--panel-2);
+ border-left:3px solid var(--sec-caution-dot); border-radius:0 8px 8px 0; padding:8px 12px; margin:0 0 6px;}
+ul.cautions .q{font-size:12px; color:var(--ink-2);}
+.pick{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:0 0 14px;}
+.pick h3{display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px;}
+.pick .lead{font-size:15px;}
+.gtag{display:inline-block; font-size:12px; padding:1px 9px; border-radius:999px; white-space:nowrap;
+ background:var(--panel-2); border:1px solid var(--line); color:var(--ink-2);}
+.gtag::before{content:""; display:inline-block; width:8px; height:8px; border-radius:2px; margin-right:5px;
+ vertical-align:-1px; background:var(--c,var(--accent));}
+.g-0{--c:var(--g-food);} .g-1{--c:var(--g-sight);} .g-2{--c:var(--g-shop);} .g-3{--c:var(--g-etc);}
+.g-ev{--c:var(--ev);}
+dl.facts{margin:0; font-size:13px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:3px 10px;}
+dl.facts dt{color:var(--ink-2); font-weight:700; white-space:nowrap;}
+dl.facts dd{margin:0; color:var(--ink-2); min-width:0;}
+dl.facts.tbl{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 13px; margin:0 0 10px;}
+.src a{overflow-wrap:anywhere;}
+.src .at{color:var(--ink-2); margin-left:4px;}
+.sn{color:var(--ink-2);}
+.go{margin:10px 0 0;}
+.maplink{font-size:12px; white-space:nowrap; text-decoration:none; border:1px solid var(--accent);
+ border-radius:999px; padding:4px 11px; display:inline-block;}
+ul.evlist, ul.slist{list-style:none; margin:0 0 12px; padding:0;}
+ul.evlist li, ul.slist li{font-size:13px; padding:8px 0; border-top:1px solid var(--line);
+ display:flex; flex-wrap:wrap; gap:4px 8px; align-items:baseline;}
+ul.evlist .tm{font-variant-numeric:tabular-nums; color:var(--accent); font-weight:700; white-space:nowrap;}
+ul.evlist .nm, ul.slist .nm{flex:1 1 150px; min-width:0; font-size:14px; color:var(--ink);}
+ul.evlist .mt, ul.slist .mt{color:var(--ink-2); font-size:12px; flex:1 1 130px; min-width:0;}
+ul.evlist .dsc{flex:1 0 100%; color:var(--ink-2); font-size:12px;}
+ul.evlist .src, ul.slist .src{font-size:12px; flex:0 1 auto;}
+ul.slist .wm{font-size:12px; font-weight:700; color:var(--warn);}
+.cards{display:grid; gap:10px; grid-template-columns:1fr; margin:0 0 8px;}
+@media (min-width:560px){.cards{grid-template-columns:1fr 1fr;}}
+.cards a{display:block; text-decoration:none; background:var(--panel); border:1px solid var(--line);
+ border-radius:12px; padding:12px 14px; color:var(--ink);}
+.cards a .t{font-weight:700; font-size:15px; color:var(--accent);}
+.cards a .c{font-size:13px; color:var(--ink-2);}
+footer{margin-top:36px; font-size:12px; color:var(--ink-2); border-top:1px solid var(--line); padding-top:12px;}
+footer a{overflow-wrap:anywhere;}
+</style>
+<div class="bar"><div class="in">
+  <h1>大阪 9/20〜22 見どころ</h1>
+  <span class="sub">表の版 2026-09-18 · 事実(営業時間・駅・予約・予算・日時・Source)は表から生成</span>
+  <nav class="top"><a href="index.html" aria-current="page">見どころ(11)</a><a href="umeda.html">梅田(7)</a><a href="namba.html">難波・日本橋(8)</a><a href="tennoji.html">天王寺(4)</a><a href="bay.html">ベイエリア(4)</a><a href="castle.html">大阪城(4)</a><a class="map" href="../">地図へ</a></nav>
+</div></div>
+<script>
+(function(){var b=document.querySelector('.bar');if(!b)return;
+var f=function(){document.documentElement.style.setProperty('--barh',
+ Math.round(b.getBoundingClientRect().height)+'px');};
+f();addEventListener('resize',f);
+if(window.ResizeObserver)new ResizeObserver(f).observe(b);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(f);})();
+</script>
+<main class="wrap">
+<nav class="toc" aria-labelledby="toc-h"><p class="tl" id="toc-h">目次</p><ul><li><a class="r-caution" href="#s1-caution">3 日間の注意</a></li><li><a class="r-nav" href="#s2-nav">エリア別の見どころ<span class="n">5</span></a></li><li><a class="r-pick" href="#s3-pick">全エリア横断の見どころ<span class="n">11</span></a></li><li><a class="r-list" href="#s4-list">「その他」の Spot<span class="n">8</span></a></li></ul></nav>
+<p class="lede">2026-09-20(日)〜22(火)の大阪。表(<code>spots.csv</code> 61 行 / <code>events.csv</code> 62 行)から作った読み物です。エリアごとのページに、そのエリアの特徴・注意・見どころ・Event・残りの Spot を置いています。</p>
+<h2 id="s1-caution" class="sec r-caution">3 日間の注意<span class="n">祝日・振替休・到着</span></h2>
+<ul class="cautions">
+<li>9/20(日)・9/21(敬老の日)・9/22(国民の休日)はいずれも土日祝の扱い。月曜定休の施設は 9/21 に開いて 9/22 が振替休になることが多い。</li>
+<li>9/20 は TGS(幕張)からの移動で午後着の想定(REQUIREMENTS.md。違えば直す)。</li>
+<li>宿は梅田か難波(REQUIREMENTS.md で仮置き。決まったら直す)。</li>
+<li>9/20〜22 に休みが名指しされている Spot(5 件): <strong>天王寺動物園</strong>(9/22)、<strong>大阪中之島美術館</strong>(9/21)、<strong>さきしまコスモタワー展望台</strong>(9/22)、<strong>ぷれじでんと千房 南本店</strong>(9/21)、<strong>道頓堀 今井 本店</strong>(9/22)</li>
+</ul>
+<h2 id="s2-nav" class="sec r-nav">エリア別の見どころ<span class="n">5 エリア</span></h2>
+<div class="cards"><a href="umeda.html"><div class="t">梅田</div><div class="c">Spot 12 件 · Event 10 件 · 見どころ 7 本</div></a><a href="namba.html"><div class="t">難波・日本橋</div><div class="c">Spot 23 件 · Event 31 件 · 見どころ 8 本</div></a><a href="tennoji.html"><div class="t">天王寺</div><div class="c">Spot 9 件 · Event 6 件 · 見どころ 4 本</div></a><a href="bay.html"><div class="t">ベイエリア</div><div class="c">Spot 5 件 · Event 4 件 · 見どころ 4 本</div></a><a href="castle.html"><div class="t">大阪城</div><div class="c">Spot 4 件 · Event 3 件 · 見どころ 4 本</div></a></div>
+<h2 id="s3-pick" class="sec r-pick">全エリア横断の見どころ<span class="n">11 本</span></h2>
+<article class="pick"><h3>大阪城天守閣<span class="gtag g-1">観光</span></h3><p class="lead">大坂城は天下統一をめざす豊臣秀吉によって天正11年(1583)に築造が開始され、2度の焼失を経て天守閣のない時代が続いた。現在の天守閣は昭和6年(1931)、当時の関市長の呼びかけで市民らの寄付により建造されたもので、266年ぶりに甦った地上55m・5層8階の建物。9/20〜22 は 9:00〜18:00(入館は17:30まで)。</p><p class="sum"><span class="mk">※要約</span>昭和6年に市民の寄付で建造された地上55m・5層8階の天守閣。黄金の装飾が輝く。</p><details class="off"><summary>公式の説明(原文)</summary><blockquote>青空をバックに凛としてそびえ立つ大阪城天守閣。大坂城は天下統一をめざす豊臣秀吉によって天正11年（1583）、大坂（石山）本願寺跡で築造が開始された。城の本丸のなかで最も中心の建物である天守閣はその2年後に完成したが、元和（げんな）元年（1615）の大坂夏の陣で豊臣氏の滅亡とともに天守閣も焼失。徳川時代になって再建されたものの寛文5年（1665）、落雷によって再び焼失。以来、大坂城は天守閣のないままだった。現在の天守閣は昭和6年（1931）、当時の関市長の呼びかけで市民らの寄付により建造されたもの。266年ぶりに甦った天守閣は、地上55m、5層8階。</blockquote><p class="src"><a href="https://osaka-info.jp/spot/osaka-castle-main-keep/" target="_blank" rel="noopener">osaka-info.jp/spot/osaka-castle-main-keep/</a><span class="at">(2026-09-19 取得)</span></p></details><dl class="facts"><dt>ジャンル</dt><dd>観光</dd><dt>最寄駅</dt><dd>森ノ宮駅/谷町四丁目駅</dd><dt>営業時間</dt><dd>9:00～18:00（入館は17:30まで）※9/20-22とも同じ<div class="note-s">9/20〜22 は 3 日とも休みの名指しなし</div><div class="note-s">定休日(原文): 12月28日～1月1日（9/20-22は開館）</div></dd><dt>予約</dt><dd>不可</dd><dt>予算</dt><dd>1200円</dd><dt>所要</dt><dd>1時間※目安</dd><dt>選んだ理由</dt><dd>優先度 ◎。公式に「入館予約を承っておりません」とあり、15名以上が要電話なので、4〜8 人なら予約なしで入れる根拠が公式にある。3 日間の営業: 9/20〜22 とも開館。</dd><dt>Source</dt><dd><span class="src"><a href="https://www.osakacastle.net/guide/" target="_blank" rel="noopener">www.osakacastle.net/guide/</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#s=s43afba1e70">地図で見る</a></p></article><article class="pick"><h3>海遊館<span class="gtag g-1">観光</span></h3><p class="lead">世界最大の海、太平洋とその周辺海域の自然環境を忠実に再現した水族館。ジンベエザメが悠然と泳ぐ「太平洋」水槽をはじめ約620種30000点を飼育展示し、「海月銀河」や「北極圏」水槽も人気。9/20・21・22 は 3 日とも 8:00〜21:00 の特別営業。</p><p class="sum"><span class="mk">※要約</span>太平洋とその周辺海域を再現した水族館。ジンベエザメの「太平洋」水槽など約620種を展示。</p><details class="off"><summary>公式の説明(原文)</summary><blockquote>海遊館は、世界最大の海、太平洋とその周辺海域の自然環境を忠実に再現した水族館です。太平洋を取り囲む環太平洋火山帯の各地域を選び、大水槽で再現しています。館内の水槽は、それぞれが実際の太平洋の地理的な位置に相当するように配置されています。ジンベエザメが悠然と泳ぐ建物中央の「太平洋」水槽をはじめとし、滝が流れ草木が茂る「日本の森」水槽やカマイルカたちの暮らす「タスマン海」水槽などの各水槽で約620種30000点の生き物たちを飼育展示しています。クラゲの魅力を追求した「海月銀河」や、ワモンアザラシなどが暮らす「北極圏」水槽も人気です。</blockquote><p class="src"><a href="https://osaka-info.jp/spot/osaka-aquarium-kaiyukan/" target="_blank" rel="noopener">osaka-info.jp/spot/osaka-aquarium-kaiyukan/</a><span class="at">(2026-09-19 取得)</span></p></details><dl class="facts"><dt>ジャンル</dt><dd>観光</dd><dt>最寄駅</dt><dd>大阪港駅</dd><dt>営業時間</dt><dd>9/20 8:00～21:00 ／ 9/21 8:00～21:00 ／ 9/22 8:00～21:00（公式カレンダー）<div class="note-s">9/20〜22 は 3 日とも休みの名指しなし</div><div class="note-s">定休日(原文): 次回の休館日 2027年1月13日(水)・14日(木)（9/20-22は営業）</div></dd><dt>予約</dt><dd>推奨</dd><dt>予算</dt><dd>記載なし（価格変動制）</dd><dt>所要</dt><dd>2時間※目安</dd><dt>選んだ理由</dt><dd>優先度 ◎。3 日間の営業: 3 日とも 8 時開館で、次回の休館日は 2027 年 1 月。価格変動制の日時指定 e チケットを公式が推奨しており、4〜8 人分をまとめて押さえる根拠が公式にある。</dd><dt>Source</dt><dd><span class="src"><a href="https://www.kaiyukan.com/info/hours/" target="_blank" rel="noopener">www.kaiyukan.com/info/hours/</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#s=s830da5bfc4">地図で見る</a></p></article><article class="pick"><h3>通天閣<span class="gtag g-1">観光</span></h3><p class="lead">国の登録有形文化財として登録されている大阪のランドマークタワー。黄金の展望台には、足の裏を触ると幸運が訪れると言われている「ビリケン」像が鎮座する。1912年の初代は火災で解体され、1956年に地元住人の運動で再建された2代目は避雷針を含めて108m。</p><p class="sum"><span class="mk">※要約</span>国の登録有形文化財の大阪のランドマークタワー。展望台にビリケン像が鎮座する。</p><details class="off"><summary>公式の説明(原文)</summary><blockquote>国の登録有形文化財として登録されている大阪のランドマークタワー「通天閣」。大阪の景気が一望出来る黄金の展望台には足の裏を触ると幸運が訪れると言われている“ビリケン”像が鎮座しています。1912年7月に娯楽施設ルナパークのシンボルタワーとして、凱旋門にエッフェル塔を乗せたような初代通天閣が建設された。高さは約75mで当時東洋一の高さを誇り、名前の由来は「天に通じる高い建物」との意味である。1943年1月に初代通天閣は火災にあって解体された。その後、1956年に地元住人の運動により2代目通天閣が再建された。2代目通天閣の高さは避雷針を含めて108m。</blockquote><p class="src"><a href="https://osaka-info.jp/spot/tsutenkaku/" target="_blank" rel="noopener">osaka-info.jp/spot/tsutenkaku/</a><span class="at">(2026-09-19 取得)</span></p></details><dl class="facts"><dt>ジャンル</dt><dd>観光</dd><dt>最寄駅</dt><dd>恵美須町駅/動物園前駅</dd><dt>営業時間</dt><dd>一般展望台 9:00～21:45(最終入場21:15)／わくわくランド 9:00～21:30(最終入場21:15)<div class="note-s">9/20〜22 は 3 日とも休みの名指しなし</div><div class="note-s">定休日(原文): 記載なし</div></dd><dt>予約</dt><dd>必須</dd><dt>予算</dt><dd>大人(15歳以上)1500円</dd><dt>所要</dt><dd>1時間※目安</dd><dt>選んだ理由</dt><dd>優先度 ◎。入場時間予約制で事前オンライン購入を公式が推奨しており、4〜8 人がまとまって入る根拠が公式にある。3 日間の営業: 一般展望台は 9:00〜21:45(最終入場21:15)。</dd><dt>Source</dt><dd><span class="src"><a href="https://www.tsutenkaku.co.jp/annai/index.html" target="_blank" rel="noopener">www.tsutenkaku.co.jp/annai/index.html</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#s=sdf99cbd91b">地図で見る</a></p></article><article class="pick"><h3>道頓堀<span class="gtag g-1">観光</span></h3><p class="lead">松竹座にかに道楽、グリコの看板など、巨大な立体看板が立ち並ぶ大阪・ミナミの代表的な繁華街。名は慶長17年(1612)に私財をなげうって川を開削した安井道頓に由来する。飲食店が道頓堀通りの両側に軒を連ね、一年中賑わいを見せている。</p><p class="sum"><span class="mk">※要約</span>巨大な立体看板が立ち並ぶミナミの代表的な繁華街。飲食店が軒を連ね一年中賑わう。</p><details class="off"><summary>公式の説明(原文)</summary><blockquote>巨大看板にたこ焼き！ 大阪らしさを満喫できるミナミの代表的な商店街／松竹座にかに道楽、そしてグリコの看板など、巨大な立体看板が立ち並ぶ道頓堀は、大阪・ミナミの代表的な繁華街。道頓堀の名は、慶長17年（1612）に私財をなげうって川を開削した安井道頓（やすい・どうとん）の名前に由来。その後、芝居や歌舞伎の娯楽の街として栄え、茶屋なども増えたのが、今の食とライブエンターテインメントの街のもとになりました。芝居小屋としての劇場は戎橋近くの松竹座だけですが、お笑いのホールもあります。飲食店は道頓堀通りの両側にさまざまなジャンルの店が軒を連ね、一年中賑わいを見せています。</blockquote><p class="src"><a href="https://osaka-info.jp/spot/dotonbori/" target="_blank" rel="noopener">osaka-info.jp/spot/dotonbori/</a><span class="at">(2026-09-19 取得)</span></p></details><dl class="facts"><dt>ジャンル</dt><dd>観光</dd><dt>最寄駅</dt><dd>なんば駅</dd><dt>営業時間</dt><dd>店舗により異なる<div class="note-s">9/20〜22 は 3 日とも休みの名指しなし</div><div class="note-s">定休日(原文): 店舗により異なる</div></dd><dt>予約</dt><dd>不要</dd><dt>予算</dt><dd>記載なし</dd><dt>所要</dt><dd>1時間※目安</dd><dt>選んだ理由</dt><dd>優先度 ◎。予約不要で人数の制約がなく、4〜8 人の集合・解散に使える。3 日間の営業: 街歩きは 3 日ともでき、店舗ごとの営業時間は表を見る。ジャンルの偏りを避ける(観光)。</dd><dt>Source</dt><dd><span class="src"><a href="https://osaka-info.jp/spot/dotonbori/" target="_blank" rel="noopener">osaka-info.jp/spot/dotonbori/</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#s=s8f90057f62">地図で見る</a></p></article><article class="pick"><h3>梅田スカイビル 空中庭園展望台<span class="gtag g-1">観光</span></h3><p class="lead">39階・40階・屋上の3フロアからなる展望施設。35Fから39Fへ向かうシースルーエスカレーターはフォトスポットとしても人気で、360度オープンエアの屋上展望フロアから一望できる風景が目玉。9/20〜22 は 9:30〜22:30(最終入場22:00)。</p><p class="sum"><span class="mk">※要約</span>39階・40階・屋上の3フロアからなる展望施設。360度オープンエアの屋上から大阪を一望できる。</p><details class="off"><summary>公式の説明(原文)</summary><blockquote>大阪梅田のランドマーク『梅田スカイビル 空中庭園展望台』は39階・40階・屋上の3フロアからなる展望施設で、35Fから39Fへ向かうシースルーエスカレーターはフォトスポットとしても人気です。40階屋内展望フロアにあるカフェスペースには全長35mのガラスカウンターが広がり、空に浮かんだような感覚でカフェタイムをお楽しみいただけるほか、360度オープンエアの屋上展望フロアから一望できる風景は、どの季節・どの時間帯も1度は見ていただきたい絶景です。</blockquote><p class="src"><a href="https://osaka-info.jp/spot/umeda-sky-building/" target="_blank" rel="noopener">osaka-info.jp/spot/umeda-sky-building/</a><span class="at">(2026-09-19 取得)</span></p></details><dl class="facts"><dt>ジャンル</dt><dd>観光</dd><dt>最寄駅</dt><dd>大阪駅/梅田駅</dd><dt>営業時間</dt><dd>9:30〜22:30(最終入場22:00)<div class="note-s">9/20〜22 は 3 日とも休みの名指しなし</div><div class="note-s">定休日(原文): 記載なし</div></dd><dt>予約</dt><dd>不要</dd><dt>予算</dt><dd>大人2,000円／4歳～小学生500円</dd><dt>所要</dt><dd>1時間※目安</dd><dt>選んだ理由</dt><dd>優先度 ◎。予約不要で WEB チケットと当日券の両方があり、4〜8 人がその場で入れる根拠が公式にある。3 日間の営業: 定休日の記載なし。</dd><dt>Source</dt><dd><span class="src"><a href="https://www.skybldg.co.jp/observatory/information/" target="_blank" rel="noopener">www.skybldg.co.jp/observatory/information/</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#s=sd905eaa3c1">地図で見る</a></p></article><article class="pick"><h3>日本橋でんでんタウン<span class="gtag g-2">買い物</span></h3><p class="lead">堺筋の東西およそ1kmに渡るアーケード沿いに150を超える店舗からなる商店街。古くから電気街として発展し、現在はマンガ、アニメ、ゲーム、フィギュア、トレカなどを扱う店舗が集積して西日本最大規模の電気街＆オタク街を形成している。</p><p class="sum"><span class="mk">※要約</span>堺筋沿い約1kmに150超の店。電気街から西日本最大規模のオタク街になった商店街。</p><details class="off"><summary>公式の説明(原文)</summary><blockquote>日本橋でんでんタウンは、堺筋の東西およそ1kmに渡るアーケード沿いに150を超える店舗からなる大阪でも有数の商店街です。「でんでんタウン」の名でも知られる日本橋でんでんタウンは古くから電気街として発展して来ましたが、現在ではマンガ、アニメ、ゲーム、フィギュア、トレカなどといった様々なオタクアイテムを扱う店舗が集積し、西日本最大規模の電気街＆オタク街を形成しています。</blockquote><p class="src"><a href="https://osaka-info.jp/spot/nippombashi-denden-town/" target="_blank" rel="noopener">osaka-info.jp/spot/nippombashi-denden-town/</a><span class="at">(2026-09-19 取得)</span></p></details><dl class="facts"><dt>ジャンル</dt><dd>買い物</dd><dt>最寄駅</dt><dd>恵美須町駅/日本橋駅</dd><dt>営業時間</dt><dd>店舗により異なる<div class="note-s">9/20〜22 は 3 日とも休みの名指しなし</div><div class="note-s">定休日(原文): 店舗により異なる</div></dd><dt>予約</dt><dd>不要</dd><dt>予算</dt><dd>記載なし</dd><dt>所要</dt><dd>2時間※目安</dd><dt>選んだ理由</dt><dd>優先度 ◎。予約不要で入場料がなく、4〜8 人が興味ごとに分かれて回れる。3 日間の営業: 店舗により異なる。ジャンルの偏りを避ける(買い物)。</dd><dt>Source</dt><dd><span class="src"><a href="https://osaka-info.jp/spot/nippombashi-denden-town/" target="_blank" rel="noopener">osaka-info.jp/spot/nippombashi-denden-town/</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#s=sc9f94ad43f">地図で見る</a></p></article><article class="pick"><h3>元祖串カツ だるま 新世界総本店<span class="gtag g-0">食</span></h3><p class="lead">大阪名物串かつ。その中でも「一番うまい」と言われるのは、オリジナルの衣、ヘッド油、秘伝のソースが決め手。新世界総本店は 9/20〜22 の 3 日とも 10:30〜22:30(ラストオーダー30分前)。</p><p class="sum"><span class="mk">※要約</span>オリジナルの衣とヘッド油、秘伝のソースが決め手の串かつ。総本店は予約不可・年中無休。</p><details class="off"><summary>公式の説明(原文)</summary><blockquote>味へのこだわり COMMITMENT／ただひたすら、お客さんの“これウマイなぁ”を聞きたいがために、 開発を重ねようやく納得のいく味に辿り着きました。／「だるま」の歴史 HISTORY／大阪名物串かつ。その中でも「一番うまい」と言われるのは、オリジナルの衣、ヘッド油、秘伝のソースが決め手や！／新世界総本店　予約：不可　営業時間　平日:11：00～22：30　土・日・祝:10:30～22:30（ラストオーダー30分前）　定休日：年中無休　最寄り駅：JR新今宮駅、地下鉄動物園前駅</blockquote><p class="src"><a href="https://www.kushikatu-daruma.com/" target="_blank" rel="noopener">www.kushikatu-daruma.com/</a><span class="at">(2026-09-19 取得)</span></p></details><dl class="facts"><dt>ジャンル</dt><dd>食</dd><dt>最寄駅</dt><dd>恵美須町駅/動物園前駅</dd><dt>営業時間</dt><dd>平日:11：00～22：30 土・日・祝:10:30～22:30（ラストオーダー30分前）※9/20-22は全て10:30～22:30<div class="note-s">9/20〜22 は 3 日とも休みの名指しなし</div><div class="note-s">定休日(原文): 年中無休</div></dd><dt>予約</dt><dd>不可</dd><dt>予算</dt><dd>記載なし</dd><dt>所要</dt><dd>1時間※目安</dd><dt>選んだ理由</dt><dd>優先度 ◎。ただし公式に「予約：不可」とあり、4〜8 人で座れる根拠は公式にない。3 日間の営業: 年中無休。ジャンルの偏りを避ける(食)。</dd><dt>Source</dt><dd><span class="src"><a href="https://kushikatu-daruma.com/" target="_blank" rel="noopener">kushikatu-daruma.com/</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#s=s56dac22d6a">地図で見る</a></p></article><article class="pick"><h3>551蓬莱 本店<span class="gtag g-0">食</span></h3><p class="lead">大阪らしい活気あふれる難波、戎橋筋商店街の中心にある本店。1階はテイクアウト店で、出来立ての豚まんや焼売のほか本店限定のチャーシューまんもある。2・3階のレストランでは名物の豚まん、海鮮焼そば、各種中華料理、定食を出す。</p><p class="sum"><span class="mk">※要約</span>戎橋筋商店街の中心にある本店。1階はテイクアウト、2・3階はレストランで宴会も可。</p><details class="off"><summary>公式の説明(原文)</summary><blockquote>大阪らしい活気あふれる難波、戎橋筋商店街の中心の551HORAIの本店です。1階はテイクアウト店。出来立ての豚まんや焼売はもちろん、アイスキャンデーや本店限定のチャーシューまん、あんまんなどもおすすめです。2,3階のレストランでは名物の豚まんはもちろん、海鮮焼そばや各種中華料理、定食をご用意しております。ご宴会も承っておりますので、みなさんでお越しください。</blockquote><p class="src"><a href="https://www.551horai.co.jp/shop/list/13/" target="_blank" rel="noopener">www.551horai.co.jp/shop/list/13/</a><span class="at">(2026-09-19 取得)</span></p></details><dl class="facts"><dt>ジャンル</dt><dd>食</dd><dt>最寄駅</dt><dd>なんば駅</dd><dt>営業時間</dt><dd>売店 10:00～21:30／レストラン 11:00～21:30ラストオーダー<div class="note-s">9/20〜22 は 3 日とも休みの名指しなし</div><div class="note-s">定休日(原文): 第１・３火曜日（9/22は第4火曜のため営業）</div></dd><dt>予約</dt><dd>記載なし</dd><dt>予算</dt><dd>記載なし</dd><dt>所要</dt><dd>1時間※目安</dd><dt>選んだ理由</dt><dd>優先度 ◎。公式に「ご宴会も承っておりますので、みなさんでお越しください」とあり、4〜8 人で座れる根拠が公式にある。3 日間の営業: 第1・3火曜休のため 9/22(第4火曜)も営業。</dd><dt>Source</dt><dd><span class="src"><a href="https://www.551horai.co.jp/shop/list/13/" target="_blank" rel="noopener">www.551horai.co.jp/shop/list/13/</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#s=s3c084b6c22">地図で見る</a></p></article><article class="pick ev"><h3>天王寺動物園 2026ナイトZOO<span class="gtag g-ev">イベント</span></h3><p class="lead">夜の動物の姿を公開するナイトZOO の開催日(9/19〜23)。最終入園19:30、17時頃からライトアップ。入園チケットはゲートまたは公式WEBで購入する。</p><dl class="facts"><dt>日時</dt><dd>9/20 09:30〜20:00</dd><dt>会場</dt><dd>天王寺動物園(大阪市天王寺区茶臼山町1-108)</dd><dt>内容</dt><dd>夜の動物の姿を公開するナイトZOO開催日(9/19〜23)。最終入園19:30、17時頃からライトアップ。入園チケットはゲートまたは公式WEBで購入(料金は本文に記載なし)</dd><dt>予約</dt><dd>不要</dd><dt>予算</dt><dd>記載なし</dd><dt>選んだ理由</dt><dd>3 日間の開催: 9/20・21・22 とも開催日。予約不要でゲート購入でき、4〜8 人が当日に入れる。夕方以降に動ける枠としてジャンルの偏りを避ける。</dd><dt>Source</dt><dd><span class="src"><a href="https://www.tennojizoo.jp/event-info/46679/" target="_blank" rel="noopener">www.tennojizoo.jp/event-info/46679/</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#e=ee093e50b25">地図で見る</a></p></article><article class="pick ev"><h3>てんしばオクトーバーフェスト2026 feat.世界のワインフェス<span class="gtag g-ev">イベント</span></h3><p class="lead">ドイツ直輸入の樽生ビールと世界のワインが並ぶ野外イベント。会期は 9/11〜10/4 で、土日祝は 11:00〜20:30(L.O.20:00)。週末はステージのライブがある。入場無料で飲食は有料。</p><dl class="facts"><dt>日時</dt><dd>9/20 11:00〜20:30</dd><dt>会場</dt><dd>天王寺公園エントランスエリア「てんしば」(大阪市天王寺区茶臼山町1-108)</dd><dt>内容</dt><dd>ドイツ直輸入の樽生ビールと世界のワイン。会期9/11〜10/4。土日祝11:00〜20:30(L.O.20:00)。週末はステージのライブあり。入場無料・飲食は有料</dd><dt>予約</dt><dd>不要</dd><dt>予算</dt><dd>無料</dd><dt>選んだ理由</dt><dd>3 日間の開催: 9/20・21・22 とも開催。入場無料・予約不要で人数の上限がなく、4〜8 人が集まりやすい。ジャンルの偏りを避ける(食)。</dd><dt>Source</dt><dd><span class="src"><a href="https://x.com/osk_oktoberfest/status/2089980708102242354" target="_blank" rel="noopener">x.com/osk_oktoberfest/status/208998070810224</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#e=e92cdab68f4">地図で見る</a></p></article><article class="pick ev"><h3>KOJIMA PRODUCTIONS × PARCO GAMES STRAND STORE<span class="gtag g-ev">イベント</span></h3><p class="lead">『DEATH STRANDING』シリーズ発の企画。15を超えるブランドとのコラボ、オリジナルグッズ販売、展示がある。会期 9/19〜10/12、入場無料。</p><dl class="facts"><dt>日時</dt><dd>9/20 10:00〜20:00</dd><dt>会場</dt><dd>心斎橋PARCO 9F EVENT SPACE(大阪市中央区心斎橋筋1-8-3)</dd><dt>内容</dt><dd>会期9/19〜10/12。『DEATH STRANDING』シリーズ発の企画。15を超えるブランドとのコラボ、オリジナルグッズ販売、展示。入場無料</dd><dt>予約</dt><dd>不要</dd><dt>予算</dt><dd>無料</dd><dt>選んだ理由</dt><dd>3 日間の開催: 9/20・21・22 とも開催。入場無料・予約不要で 4〜8 人がそのまま入れる。ジャンルの偏りを避ける(買い物)。</dd><dt>Source</dt><dd><span class="src"><a href="https://shinsaibashi.parco.jp/event/detail/?id=38632" target="_blank" rel="noopener">shinsaibashi.parco.jp/event/detail/?id=38632</a><span class="at">(2026-09-18 取得)</span></span></dd></dl><p class="go"><a class="maplink" href="../#e=efa06c1ec9e">地図で見る</a></p></article>
+<h2 id="s4-list" class="sec r-list">「その他」の Spot<span class="n">8 件(エリア地図を持たず全体図にだけ Pin)</span></h2>
+<ul class="slist"><li><span class="gtag g-1">観光</span><span class="nm">大阪市中央公会堂</span><span class="mt">淀屋橋駅/北浜駅 · 記載なし · 30分※目安</span><span class="src"><a href="https://osaka-chuokokaido.com/" target="_blank" rel="noopener">osaka-chuokokaido.com/</a><span class="at">(2026-09-18 取得)</span></span><a class="maplink" href="../#s=s6d0eaf8ac6">地図</a></li><li><span class="gtag g-1">観光</span><span class="nm">大阪中之島美術館</span><span class="mt">渡辺橋駅/肥後橋駅 · 展覧会により異なります · 1時間※目安</span><span class="wm">9/21 休み</span><span class="src"><a href="https://nakka-art.jp/visit/info/" target="_blank" rel="noopener">nakka-art.jp/visit/info/</a><span class="at">(2026-09-18 取得)</span></span><a class="maplink" href="../#s=sc855aed5d4">地図</a></li><li><span class="gtag g-1">観光</span><span class="nm">住吉大社</span><span class="mt">住吉大社駅/住吉鳥居前駅 · 記載なし · 1時間※目安</span><span class="src"><a href="https://osaka-info.jp/spot/sumiyoshitaisha/" target="_blank" rel="noopener">osaka-info.jp/spot/sumiyoshitaisha/</a><span class="at">(2026-09-18 取得)</span></span><a class="maplink" href="../#s=se47cfa1d7e">地図</a></li><li><span class="gtag g-1">観光</span><span class="nm">大阪くらしの今昔館</span><span class="mt">天神橋筋六丁目駅 · 一般600円（常設＋企画展セット1,000円） · 1時間※目安</span><span class="src"><a href="https://www.osaka-angenet.jp/konjyakukan/guide" target="_blank" rel="noopener">www.osaka-angenet.jp/konjyakukan/guide</a><span class="at">(2026-09-18 取得)</span></span><a class="maplink" href="../#s=sc2cfe406b3">地図</a></li><li><span class="gtag g-1">観光</span><span class="nm">大阪天満宮</span><span class="mt">南森町駅/大阪天満宮駅 · 記載なし · 30分※目安</span><span class="src"><a href="https://osakatemmangu.or.jp/" target="_blank" rel="noopener">osakatemmangu.or.jp/</a><span class="at">(2026-09-18 取得)</span></span><a class="maplink" href="../#s=se424ef6829">地図</a></li><li><span class="gtag g-2">買い物</span><span class="nm">天神橋筋商店街</span><span class="mt">南森町駅/天満駅 · 記載なし · 2時間※目安</span><span class="src"><a href="https://osaka-info.jp/spot/tenjimbashisuji-shopping-street/" target="_blank" rel="noopener">osaka-info.jp/spot/tenjimbashisuji-shopping-</a><span class="at">(2026-09-18 取得)</span></span><a class="maplink" href="../#s=sc785416947">地図</a></li><li><span class="gtag g-3">その他</span><span class="nm">天然温泉 なにわの湯</span><span class="mt">天神橋筋六丁目駅 · 大人 土日祝1,000円／平日900円 · 2時間※目安</span><span class="src"><a href="https://naniwanoyu.com/" target="_blank" rel="noopener">naniwanoyu.com/</a><span class="at">(2026-09-18 取得)</span></span><a class="maplink" href="../#s=see953c35be">地図</a></li><li><span class="gtag g-3">その他</span><span class="nm">中之島公園</span><span class="mt">北浜駅/淀屋橋駅 · 記載なし · 30分※目安</span><span class="src"><a href="https://osaka-info.jp/spot/nakanoshima-park/" target="_blank" rel="noopener">osaka-info.jp/spot/nakanoshima-park/</a><span class="at">(2026-09-18 取得)</span></span><a class="maplink" href="../#s=s2074779431">地図</a></li></ul>
+<footer>
+  事実(件数・営業時間・定休日・最寄駅・予約・予算・所要・日時・会場・Source)は
+  <code>trips/osaka-2026-09/spots.csv</code> と <code>events.csv</code>(公式サイト・公式 X・
+  企業プレスリリースだけを Source にした表)から生成。主要駅は <code>venue/base.json</code>(OpenStreetMap)。
+  見どころ文と選定理由、※要約だけが手書き(<code>highlights.md</code> / <code>spot-summaries.json</code> /
+  <code>area-features.json</code>)で、表に無いことは書いていません。
+  営業日の判定は<strong>定休日欄に 9/20・9/21・9/22 が名指しされているときだけ</strong>行っています。
+</footer>
+</main>
+</html>
