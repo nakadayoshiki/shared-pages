@@ -4,8 +4,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>試遊(Trial) · TGS2026 9/19(土)</title>
 <meta name="description" content="東京ゲームショウ2026 9/19(土)の見どころ。事実は公式の一次情報から作った表から生成しています。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <style>
 :root{
  --ground:#F2F3EF; --panel:#FBFBF9; --panel-2:#ECEEE9; --line:#CDD2CB;
@@ -82,7 +80,11 @@
 html{ -webkit-text-size-adjust:100%; }
 body{
  margin:0; background:var(--ground); color:var(--ink); font-size:15px; line-height:1.72;
- font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;
+ /* Web フォントは読まない(Google Fonts の CSS 337KB・@font-face 363 個が描画を止めていた)。
+    端末に入っている日本語フォントだけを使う。太さは 400 と 700 の 2 段だけにする
+    (端末フォントには 500 が無いことが多く、合成太字で見え方がばらつくため)。 */
+ font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN",
+  "Yu Gothic UI","Yu Gothic",Meiryo,"Noto Sans JP",system-ui,sans-serif;
  overflow-x:hidden;
 }
 /* 番組名に「10:00/10:30/11:30/…」のような切れ目の無い長い並びがあるので、どこでも折り返す */
@@ -259,6 +261,17 @@ table.works td.ex{ min-width:120px; color:var(--ink-2); }
 table.works td.bnum{ white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--ink-2); }
 table.works td.pl, table.works td.gn{ min-width:90px; color:var(--ink-2); font-size:12px; }
 table.works td.mp{ white-space:nowrap; }
+
+/* ---- 画面の外は描かない ----
+   試遊 135 枚・人 82 枚のように同じ形のカードが長く続くところだけに付ける。
+   中身は DOM に残るので、ページ内検索(Ctrl+F)・目次のアンカー・JS 無しでの閲覧はそのまま効く。
+   contain-intrinsic-size の auto は「一度描いた本当の高さを覚える」指定で、
+   後ろの数字は初回だけ使う見積り(393px の実測の中央値: 試遊カード 409px / 人カード 325px)。
+   表(table.slots / table.works)には付けない。行を飛ばすと列幅が揺れるため。 */
+.trial{ content-visibility:auto; contain-intrinsic-size:auto 400px; }
+.pcard{ content-visibility:auto; contain-intrinsic-size:auto 320px; }
+ul.tlist{ content-visibility:auto; contain-intrinsic-size:auto 700px; }
+details.corner .scroller{ content-visibility:auto; contain-intrinsic-size:auto 900px; }
 </style>
 <div class="bar"><div class="in">
   <h1>TGS2026 9/19(土) 見どころ</h1>
