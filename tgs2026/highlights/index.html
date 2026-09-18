@@ -13,6 +13,8 @@
  --gate-entry:#C42B1C; --gate-exit:#5A6560; --gate-passage:#1E7A44;
  --hl:#E3542A;
  --badge-res:#B03A16; --badge-line:#2B6E28;   /* 区分バッジの文字。--hl / --voice は 12px では 4.5:1 に足りない */
+ /* 過去の傾向の「根拠」バッジ。12px なので節見出しの帯と同じ濃さにする(体験記のみ = 弱い色) */
+ --ev-official:#175A9E; --ev-news:#B03A16; --ev-diary:#2B6E28; --ev-weak:#5F6A65;
  /* 節見出しの帯。役割ごとに色を固定し、全ページで同じ役割は同じ色にする(ライトは濃い地に白文字) */
  --sec-quick-bg:#175A9E; --sec-quick-ink:#FFFFFF; --sec-quick-dot:#175A9E;      /* 当日早見・ホール別 */
  --sec-pick-bg:#A8431A; --sec-pick-ink:#FFFFFF; --sec-pick-dot:#A8431A;         /* 見どころ・遊び方別 */
@@ -39,6 +41,7 @@
  --streamer:#6AA0F5; --cosplayer:#F06AA6; --celebrity:#F08A55; --voice:#6CC466;
  --gate-entry:#E2564A; --gate-exit:#8A938E; --gate-passage:#3FA76A; --hl:#FF7A50;
  --badge-res:#FF7A50; --badge-line:#6CC466;
+ --ev-official:#A8CDF7; --ev-news:#FF7A50; --ev-diary:#6CC466; --ev-weak:#949E99;
  /* 節見出しの帯(ダークは暗い地に明るい同系色の文字) */
  --sec-quick-bg:#16334F; --sec-quick-ink:#A8CDF7; --sec-quick-dot:#A8CDF7;
  --sec-pick-bg:#48261A; --sec-pick-ink:#F6B189; --sec-pick-dot:#F6B189;
@@ -61,6 +64,7 @@
  --streamer:#6AA0F5; --cosplayer:#F06AA6; --celebrity:#F08A55; --voice:#6CC466;
  --gate-entry:#E2564A; --gate-exit:#8A938E; --gate-passage:#3FA76A; --hl:#FF7A50;
  --badge-res:#FF7A50; --badge-line:#6CC466;
+ --ev-official:#A8CDF7; --ev-news:#FF7A50; --ev-diary:#6CC466; --ev-weak:#949E99;
  /* 節見出しの帯(ダークは暗い地に明るい同系色の文字) */
  --sec-quick-bg:#16334F; --sec-quick-ink:#A8CDF7; --sec-quick-dot:#A8CDF7;
  --sec-pick-bg:#48261A; --sec-pick-ink:#F6B189; --sec-pick-dot:#F6B189;
@@ -261,6 +265,41 @@ table.works td.ex{ min-width:120px; color:var(--ink-2); }
 table.works td.bnum{ white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--ink-2); }
 table.works td.pl, table.works td.gn{ min-width:90px; color:var(--ink-2); font-size:12px; }
 table.works td.mp{ white-space:nowrap; }
+
+/* ---- 過去の傾向から見た注意点(試遊ページ。節の役割色は caution) ---- */
+.tipbar{ display:flex; justify-content:flex-end; margin:0 0 10px; }
+button.tgl{ font-family:inherit; font-size:13px; line-height:1.4; min-height:44px; padding:8px 18px;
+ color:var(--ink); background:var(--panel-2); border:1px solid var(--line); border-radius:999px; cursor:pointer; }
+details.tip{ background:var(--panel); border:1px solid var(--line);
+ border-left:4px solid var(--sec-caution-dot); border-radius:0 12px 12px 0; margin:0 0 10px; }
+/* 開閉の印(▸/▾)は自前で描く。既定のマーカーは消す(端末で形も位置もばらつくため) */
+details.tip > summary{ list-style:none; cursor:pointer; display:flex; gap:9px; align-items:flex-start;
+ min-height:44px; padding:11px 14px; border-radius:0 12px 12px 0; }
+details.tip > summary::-webkit-details-marker{ display:none; }
+details.tip > summary::marker{ content:""; }
+.twist{ flex:0 0 auto; width:16px; font-size:13px; line-height:1.7; color:var(--ink-2); }
+.twist::before{ content:"\25B8"; }
+details.tip[open] > summary .twist::before{ content:"\25BE"; }
+.tipb{ flex:1 1 auto; min-width:0; }
+.tiph{ display:block; font-size:15px; font-weight:700; line-height:1.5; }
+.tipsum{ display:block; font-size:13px; line-height:1.7; color:var(--ink-2); margin-top:2px; }
+.tipm{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-top:6px; }
+.ebadge{ display:inline-block; font-size:12px; line-height:1.6; padding:0 9px; border-radius:999px;
+ white-space:nowrap; border:1px solid var(--e,var(--line)); color:var(--e,var(--ink-2)); background:var(--panel-2); }
+.ebadge.e-official{ --e:var(--ev-official); font-weight:700; }
+.ebadge.e-news{ --e:var(--ev-news); }
+.ebadge.e-diary{ --e:var(--ev-diary); }
+.ebadge.e-weak{ --e:var(--ev-weak); }      /* 体験記のみ = 裏が弱い。弱い色にする */
+.tipyr{ font-size:12px; color:var(--ink-2); font-variant-numeric:tabular-nums; }
+.tipbody{ padding:2px 14px 12px; border-top:1px solid var(--line); }
+.tipbody h4{ font-size:13px; font-weight:700; color:var(--ink-2); margin:12px 0 4px; letter-spacing:.04em; }
+.tipbody p{ font-size:14px; line-height:1.8; margin:0 0 8px; }
+.tipbody ul{ font-size:14px; line-height:1.8; margin:0 0 8px; padding-left:1.3em; }
+.tipbody li{ margin:0 0 3px; }
+ul.tsrc{ list-style:none; margin:0; padding:0; }
+ul.tsrc li{ font-size:13px; line-height:1.7; padding:5px 0; border-top:1px solid var(--line); }
+ul.tsrc .sk{ font-size:12px; color:var(--ink-2); margin-right:6px; white-space:nowrap; }
+ul.tsrc a{ overflow-wrap:anywhere; }
 
 /* ---- 画面の外は描かない ----
    試遊 135 枚・人 82 枚のように同じ形のカードが長く続くところだけに付ける。
