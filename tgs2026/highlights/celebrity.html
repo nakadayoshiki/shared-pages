@@ -14,6 +14,7 @@
  --streamer:#2A6FDB; --cosplayer:#D0367A; --celebrity:#D9652B; --voice:#3F9A3A;
  --gate-entry:#C42B1C; --gate-exit:#5A6560; --gate-passage:#1E7A44;
  --hl:#E3542A;
+ --badge-res:#B03A16; --badge-line:#2B6E28;   /* 区分バッジの文字。--hl / --voice は 12px では 4.5:1 に足りない */
  color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -22,6 +23,7 @@
  --accent:#6FB8A3; --accent-ink:#0F1512;
  --streamer:#6AA0F5; --cosplayer:#F06AA6; --celebrity:#F08A55; --voice:#6CC466;
  --gate-entry:#E2564A; --gate-exit:#8A938E; --gate-passage:#3FA76A; --hl:#FF7A50;
+ --badge-res:#FF7A50; --badge-line:#6CC466;
  color-scheme:dark;
 }}
 :root[data-theme="dark"]{
@@ -30,6 +32,7 @@
  --accent:#6FB8A3; --accent-ink:#0F1512;
  --streamer:#6AA0F5; --cosplayer:#F06AA6; --celebrity:#F08A55; --voice:#6CC466;
  --gate-entry:#E2564A; --gate-exit:#8A938E; --gate-passage:#3FA76A; --hl:#FF7A50;
+ --badge-res:#FF7A50; --badge-line:#6CC466;
  color-scheme:dark;
 }
 *{box-sizing:border-box;}
@@ -128,11 +131,56 @@ ul.cautions li{ font-size:13px; line-height:1.7; color:var(--ink); background:va
 .cards a .c{ font-size:13px; color:var(--ink-2); }
 footer{ margin-top:36px; font-size:12px; color:var(--ink-2); border-top:1px solid var(--line); padding-top:12px; }
 footer a{ overflow-wrap:anywhere; }
+
+/* ---- 試遊(Trial)ページ ---- */
+h3.grp{ font-size:15px; margin:22px 0 4px; padding-left:10px; border-left:4px solid var(--accent); }
+h3.grp .n{ font-size:12px; color:var(--ink-3); font-weight:400; margin-left:8px; }
+p.gnote{ font-size:12px; color:var(--ink-2); margin:0 0 10px; }
+ul.stats{ list-style:none; margin:0 0 12px; padding:0; display:grid; gap:8px; grid-template-columns:1fr 1fr; }
+@media (min-width:560px){ ul.stats{ grid-template-columns:repeat(4,1fr); } }
+ul.stats li{ background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:10px 12px; min-width:0; }
+ul.stats .v{ display:block; font-size:24px; font-weight:700; line-height:1.2; color:var(--accent);
+ font-variant-numeric:tabular-nums; }
+ul.stats .k{ display:block; font-size:12px; color:var(--ink-2); }
+.badge{ display:inline-block; font-size:12px; line-height:1.6; padding:0 9px; border-radius:999px; white-space:nowrap;
+ border:1px solid var(--b,var(--line)); color:var(--b,var(--ink-2)); background:var(--panel-2); }
+.badge.b-yoyaku{ --b:var(--badge-res); font-weight:700; }
+.badge.b-narabu{ --b:var(--badge-line); }
+.badge.b-none{ --b:var(--ink-3); }
+.trial{ background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:0 0 12px; }
+.trial h3{ display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; margin-bottom:8px; }
+.bn{ font-size:12px; font-weight:700; font-variant-numeric:tabular-nums; color:var(--accent);
+ background:var(--panel-2); border:1px solid var(--line); border-radius:6px; padding:1px 7px; white-space:nowrap; }
+.whole{ font-size:12px; color:var(--ink-2); font-weight:400; }
+blockquote.q{ margin:0 0 10px; padding:8px 12px; font-size:13px; line-height:1.7; color:var(--ink);
+ background:var(--panel-2); border-left:3px solid var(--accent); border-radius:0 8px 8px 0; }
+blockquote.q .ql{ display:block; font-size:12px; color:var(--ink-2); font-weight:700; }
+blockquote.q.pitch{ border-left-color:var(--hl); }
+ul.tlist{ list-style:none; margin:0 0 14px; padding:0; }
+ul.tlist li{ font-size:13px; padding:7px 0; border-top:1px solid var(--line);
+ display:flex; flex-wrap:wrap; gap:4px 8px; align-items:center; }
+ul.tlist li .ti{ flex:1 1 160px; min-width:0; }
+ul.tlist li .ex{ font-size:12px; color:var(--ink-2); }
+details.corner{ background:var(--panel); border:1px solid var(--line); border-radius:12px; margin:0 0 10px; }
+details.corner > summary{ cursor:pointer; padding:11px 14px; font-size:14px; font-weight:700; line-height:1.5;
+ border-radius:12px; }
+details.corner > summary .n{ font-size:12px; color:var(--ink-3); font-weight:400; margin-left:8px; }
+details.corner[open] > summary{ border-bottom:1px solid var(--line); border-radius:12px 12px 0 0; }
+details.corner .scroller{ border:0; border-radius:0 0 12px 12px; }
+table.works{ border-collapse:collapse; width:100%; min-width:600px; font-size:13px; }
+table.works th, table.works td{ text-align:left; vertical-align:top; padding:7px 10px; border-bottom:1px solid var(--line); }
+table.works thead th{ background:var(--panel-2); font-size:12px; color:var(--ink-2); }
+table.works tbody tr:last-child td{ border-bottom:0; }
+table.works td.ti{ min-width:180px; }
+table.works td.ex{ min-width:120px; color:var(--ink-2); }
+table.works td.bnum{ white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--ink-2); }
+table.works td.pl, table.works td.gn{ min-width:90px; color:var(--ink-2); font-size:12px; }
+table.works td.mp{ white-space:nowrap; }
 </style>
 <div class="bar"><div class="in">
   <h1>TGS2026 9/19(土) 見どころ</h1>
   <div class="sub">表の版 2026-09-18 23:40 JST · 事実(時刻・場所・出演・観覧方法・Source)は表から生成</div>
-  <nav class="nav"><a href="index.html">見どころ</a><a href="streamer.html">配信者(60)</a><a href="cosplayer.html">コスプレイヤー(37)</a><a href="celebrity.html" aria-current="page">有名人(31)</a><a href="voice.html">声優(11)</a><a class="map" href="../">地図へ</a></nav>
+  <nav class="nav"><a href="index.html">見どころ</a><a href="streamer.html">配信者(60)</a><a href="cosplayer.html">コスプレイヤー(37)</a><a href="celebrity.html" aria-current="page">有名人(31)</a><a href="voice.html">声優(11)</a><a href="trial.html">試遊(135)</a><a class="map" href="../">地図へ</a></nav>
 </div></div>
 <main class="wrap">
 <p class="lede">有名人のタグが付いた 9/19 の枠 31 本と、そこから選んだ見どころ 8 本。選定の基準はフォロワー数・観覧方法の明文・同時刻の競合の 3 つだけです。</p>
