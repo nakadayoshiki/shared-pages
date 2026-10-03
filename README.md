@@ -7,3 +7,4 @@
 - [tgs2026](https://nakadayoshiki.github.io/shared-pages/tgs2026/)
 - [tgs2026-embed-demo](https://nakadayoshiki.github.io/shared-pages/tgs2026-embed-demo/)
 - [tokyo23/kagurazaka](https://nakadayoshiki.github.io/shared-pages/tokyo23/kagurazaka/)
+- [tokyo23/shinjuku-west](https://nakadayoshiki.github.io/shared-pages/tokyo23/shinjuku-west/)
